@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Libre+Baskerville&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+html,
+body{
+    height: 100vh;
+    font-family: "Julius Sans One", 'Times New Roman', Times, serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antlalised;
+}
+
+/*HEADER */
+
+header .container{
+    background-color: #ff9966;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    height: 100px;
+    margin: auto;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 17px;
+    transition: all 250ms linear 0s;
+}
+header nav ul li a:hover {
+    background: rgba(204, 68, 0, 0.20);
+}
+header .container img{
+    height: 90px; 
+    padding-top: 30px;
+    padding-left: 5px;
+}
+
+/* MAIN */
+
+main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.container-main{
+    display: block;
+    align-items: center; 
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 70px auto 50px auto;   
+}
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 30px ;
+    line-height: 40px;
+    font-weight: bold;
+}
+h2{
+    color: rgb(0, 0, 0);
+    font-size: 20px ;
+    line-height: 40px;
+    font-weight: lighter;
+}
+
+#services {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.list{
+    list-style: none;
+    font-weight: lighter;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+.list img{
+    height: 300px; 
+    padding-top: 30px;
+    padding-left: 5px;
+}
+
