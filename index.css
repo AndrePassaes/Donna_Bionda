@@ -1,25 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Libre+Baskerville&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: 0;
 }
 html,
-body{
+body {
     height: 100vh;
+    scroll-behavior: smooth;
     font-family: "Julius Sans One", 'Times New Roman', Times, serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antlalised;
 }
-
 /*HEADER */
-
 header {
     background-color: #ff9966;
 }
-header .container{
+header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,15 +26,15 @@ header .container{
     height: 100px;
     margin: auto;
 }
-header nav ul{
+header nav ul {
     display: flex;
 }
-header nav ul li{
+header nav ul li {
     list-style: none;
 }
-header nav ul li a{
+header nav ul li a {
     text-decoration: none;
-    color:black;
+    color: black;
     text-transform: uppercase;
     font-size: 15px;
     padding: 17px;
@@ -43,52 +42,47 @@ header nav ul li a{
 }
 header nav ul li a:hover {
     background: rgba(204, 68, 0, 0.20);
+    color: white;
+    font-weight: 700;
 }
-header .container img{
-    height: 90px; 
+header .container img {
+    height: 90px;
     padding-top: 30px;
-    padding-left: 5px;
+    padding-left: 5px;    
 }
-
 /* MAIN */
-
 main {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-main .container-main{
+main .container-main {
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: space-between;
     max-width: 980px;
-    margin: 70px auto 50px auto;   
+    margin: 70px auto 50px auto;
 }
-h1{
+h1 {
     color: rgb(0, 0, 0);
-    font-size: 30px ;
+    font-size: 30px;
     line-height: 40px;
     font-weight: bold;
 }
-h2{
+h2 {
     color: rgb(0, 0, 0);
-    font-size: 20px ;
+    font-size: 20px;
     line-height: 40px;
     font-weight: lighter;
 }
-
-#services {
+.title-top {
     font-weight: bold;
     text-align: center;
-    margin-bottom: 15px;
-    
+    margin: 20px 0px 15px 0px;
 }
-container .container-main{
+container .container-main {
     width: 600px;
 }
-
-
 /* CARDS */
-
 .card {
     font-weight: lighter;
     width: 90%;
@@ -99,10 +93,10 @@ container .container-main{
     grid-gap: 20px;
 }
 .cards img {
-    height: 300px; 
+    height: 300px;
     padding-top: 8px;
     padding-left: 5px;
-    padding-right: 5px;    
+    padding-right: 5px;
 }
 .text-serv {
     font-size: 16px;
@@ -111,30 +105,102 @@ container .container-main{
     color: grey;
     text-align: center;
 }
-.cards{
+.cards {
     width: 100%;
     padding-top: 15%;
     overflow: hidden;
-    position: relative;
 }
 .image {
     display: flex;
     flex-direction: column;
     cursor: pointer;
     box-shadow: 5px 5px 15px -4px #000000;
-    transition: all 0.3s ease 0s;  
+    transition: all 0.3s ease 0s;
+    position: relative;
+    border-radius: 15px;
 }
-.image:hover{
+.image:hover {
     transform: translateY(-7px);
 }
-.image img{
+.image img {
     border-radius: 15px;
-  
-} 
-/*.content{
-    width: 200px;
+}
+/*PODOLOGIA*/
+.test {
+    font-weight: lighter;
+    width: 90%;
     max-width: 980px;
     margin: auto;
-   
-}*/
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+.content-image {
+    max-width: 980px;
+}
+#podol {
+    height: 300px;
+    padding: 8px 5px 5px 5px;    
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px -4px #000000;
+    transition: all 0.3s ease 0s;
+}
+#podol:hover {
+    transform: translateX(-7px);
+}
+#podol {
+    border-radius: 15px;
+}
+/* INTERACTIVE TEXT*/
+#text--pod {
+    display: flex;
+    width: fit-content;
+    position: relative;
+    color: transparent;
+    height: 300px;
+    padding: 8px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px -4px #000000;
+    transition: all 0.3s ease 0s;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+    border-radius: 15px;    
+}
+#text--pod:hover {
+    transform: translateX(-7px);
+}
+#text--pod p:nth-child(1) {
+    animation-delay: .8s;
+}
+#text--pod span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    animation: text_reveal_box .2s ease;
+    animation-delay: .1s;
+}
+#text p:nth-child(1) span {
+    animation-delay: .1s;
+}
+/*keyframes*/
+@keyframes text_reveal {
+    100% {
+        color: black;
+    }
+}
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
