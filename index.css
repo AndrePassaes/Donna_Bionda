@@ -188,25 +188,74 @@ container .container-main {
 #text p:nth-child(1) span {
     animation-delay: .1s;
 }
-/*CONTACT*/
+/*SECTION END*/
+#text-end{
+    display: flex;
+    justify-content: space-between;  
+    height: 200px;    
+    margin: 100px auto;
+    max-width: 980px;
+    
+}
+.container-end{
+    font-size: 20px;
+}
+.container-end h3{
+    margin-bottom: 20px;           
+}
+.container-end h4{
+    margin-bottom: 5px;
+    width: 500px;
+    color:  darkgray;
+}
+/*FORM*/
+form {      
+    margin: 0px 0px 900px 100px;
+    height: 230px;    
+}
+form input{
+    width: 380px;
+    padding-left: 15px;
+    font-size: 18px;
+    height: 45px;
+    margin-bottom: 13px;
+    border-radius: 15px;
+    border: 2px solid #ff9966;
+}
+form [type="submit"] {
+    background-color: #ff9966;
+    color: black;
+}
+form [type="submit"]:hover {
+    cursor: pointer;
+}
+/*FOOTER*/
 footer{
-    text-align: left;    
+    text-align: left;          
+}
+#contact{
+    background-color:#ff9966 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1980px;
+    height: 115px;
+    margin: auto;
+}
+footer .text-end{
+    text-decoration: none;
+
+}
+#instagram {
+    height: 15px;
 }
 a{
     text-decoration: none;
     color: #000000;
+    text-transform: lowercase;
 }
-#contact{
-    padding: 30px 0px 20px 0px;
-    display: block;
-    text-align: center;
-    margin: auto;
-    width: fit-content;
-}
-footer .text-end{
-    border: solid rgb(218, 96, 149) 15px;
-    text-decoration: none;
-
+.final{
+margin: 10px;
 }
 
 
